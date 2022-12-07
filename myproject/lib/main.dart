@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myproject/Screens/ColumnScreen.dart';
+import 'package:myproject/screens/RowsScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,16 +56,61 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("Home Screen"),
       ),
-      body: InkWell(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ColumnScreen(),
-            ),
-          );
-        },
-        child: Text("Columns"),
+      body: Column(
+        children: [
+          ListTile(
+            title: Text("Columns"),
+            leading: Icon(Icons.view_column_outlined),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("All about columns..."),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ColumnScreen(),
+                ),
+              );
+            },
+          ),
+
+
+          ListTile(
+            title: Text("Rows"),
+            leading: Icon(Icons.table_rows_outlined),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("All about rows..."),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => RowsScreen(),
+                ),
+              );
+            },
+          ),
+          /*InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ColumnScreen(),
+                ),
+              );
+            },
+            child: Text("Columns"),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ColumnScreen(),
+                ),
+              );
+            },
+            child: Text("Columns"),
+          ),*/
+        ],
       ),
     );
   }
