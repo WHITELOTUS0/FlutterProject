@@ -19,7 +19,18 @@ class _RowsScreenState extends State<RowsScreen> {
       appBar: AppBar(
         title: Text("Rows"),
       ),
-      body: Text("My body..."),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("1"),
+          Text("2"),
+          Text("3"),
+          Text("4"),
+          Text("5"),
+          Text("6"),
+
+        ],
+      ),
     );
   }
 }

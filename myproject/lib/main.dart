@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myproject/Screens/ColumnScreen.dart';
+import 'package:myproject/screens/ContainerScreen.dart';
 import 'package:myproject/screens/RowsScreen.dart';
 
 void main() {
@@ -84,6 +85,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => RowsScreen(),
+                ),
+              );
+            },
+          ),
+
+          ListTile(
+            title: Text("Container"),
+            leading: Icon(Icons.check_box_outline_blank),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("All about container..."),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ContainerScreen(),
                 ),
               );
             },
