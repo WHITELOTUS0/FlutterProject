@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:myproject/Screens/ColumnScreen.dart';
 import 'package:myproject/screens/ContainerScreen.dart';
+import 'package:myproject/screens/ContainerStylingScreen.dart';
+import 'package:myproject/screens/ImagesScreen.dart';
 import 'package:myproject/screens/RowsScreen.dart';
+import 'package:myproject/screens/TextStylingScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("Home Screen"),
       ),
-      body: Column(
+      body: ListView(
         children: [
           ListTile(
             title: Text("Columns"),
@@ -100,6 +103,51 @@ class _MyHomePageState extends State<MyHomePage> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ContainerScreen(),
+                ),
+              );
+            },
+          ),
+
+          ListTile(
+            title: Text("Images"),
+            leading: Icon(Icons.photo_size_select_actual_outlined),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("All about Images..."),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ImagesScreen(),
+                ),
+              );
+            },
+          ),
+
+          ListTile(
+            title: Text("Text styling"),
+            leading: Icon(Icons.text_fields_outlined),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("Decorating Text..."),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TextStylingScreen(),
+                ),
+              );
+            },
+          ),
+
+          ListTile(
+            title: Text("Container styling"),
+            leading: Icon(Icons.deblur_rounded),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("Decorating Containers..."),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ContainerStylingScreen(),
                 ),
               );
             },
