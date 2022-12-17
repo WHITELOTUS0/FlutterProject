@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:myproject/Screens/ColumnScreen.dart';
 import 'package:myproject/screens/ContainerScreen.dart';
 import 'package:myproject/screens/ContainerStylingScreen.dart';
+import 'package:myproject/screens/FormTextField.dart';
 import 'package:myproject/screens/ImagesScreen.dart';
 import 'package:myproject/screens/RowsScreen.dart';
 import 'package:myproject/screens/TextStylingScreen.dart';
+import 'package:myproject/screens/ToastScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -148,6 +150,37 @@ class _MyHomePageState extends State<MyHomePage> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ContainerStylingScreen(),
+                ),
+              );
+            },
+          ),
+
+
+          ListTile(
+            title: Text("Toast"),
+            leading: Icon(Icons.touch_app),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("How to make pop ups..."),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ToastScreen(),
+                ),
+              );
+            },
+          ),
+
+          ListTile(
+            title: Text("Form Text"),
+            leading: Icon(Icons.text_fields),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("Text Input"),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FormTextField(),
                 ),
               );
             },
