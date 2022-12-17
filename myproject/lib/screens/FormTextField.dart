@@ -27,7 +27,26 @@ class _FormTextFieldState extends State<FormTextField> {
               readOnly: true,
             ),
             FormBuilderTextField(
-              name: "last_name",),
+              name: "password",
+              obscureText: true,
+              autofocus: true,
+              textInputAction: TextInputAction.next,
+            ),
+            FormBuilderTextField(
+              name: "country",
+              textAlign: TextAlign.center,
+              cursorWidth: 5,
+              cursorColor: Colors.red,
+              textInputAction: TextInputAction.next,
+              textCapitalization: TextCapitalization.characters,
+              maxLength: 10,
+            ),
+            FormBuilderTextField(
+              name: "phone_number",
+              keyboardType: TextInputType.number,
+              textInputAction: TextInputAction.search,
+
+            ),
           ],
         ),
       ),
