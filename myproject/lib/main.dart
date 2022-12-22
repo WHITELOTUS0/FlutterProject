@@ -5,7 +5,10 @@ import 'package:myproject/screens/ContainerStylingScreen.dart';
 import 'package:myproject/screens/FormDecoration.dart';
 import 'package:myproject/screens/FormOtherFieldsScreen.dart';
 import 'package:myproject/screens/FormTextField.dart';
+import 'package:myproject/screens/HttpRequestScreen.dart';
 import 'package:myproject/screens/ImagesScreen.dart';
+import 'package:myproject/screens/JsonScreen.dart';
+import 'package:myproject/screens/ProductsScreen.dart';
 import 'package:myproject/screens/RowsScreen.dart';
 import 'package:myproject/screens/TextStylingScreen.dart';
 import 'package:myproject/screens/ToastScreen.dart';
@@ -213,6 +216,50 @@ class _MyHomePageState extends State<MyHomePage> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => FormOtherFieldsScreen(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text("JSON"),
+            leading: Icon(Icons.border_inner_sharp),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("Other input fields"),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => JsonScreen(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text("HttpRequest"),
+            leading: Icon(Icons.http),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("Internet Communication"),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HttpRequestScreen(),
+                ),
+              );
+            },
+          ),
+
+
+          ListTile(
+            title: Text("Products"),
+            leading: Icon(Icons.add_shopping_cart),
+            trailing: Icon(Icons.chevron_right),
+            subtitle:Text("List of Products"),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProductsScreen(),
                 ),
               );
             },
